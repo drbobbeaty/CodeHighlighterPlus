@@ -453,7 +453,7 @@ class GeSHi {
      * @var string
      */
 //    var $code_style = 'font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;';
-    var $code_style = 'font: monospace; margin:0; padding:0; background:none; vertical-align:top;';
+    var $code_style = 'font-family: Inconsolata, \'Luxi Mono\', \'Courier New\', Courier; margin:0; padding:0; background:none; vertical-align:top;';
 
     /**
      * The overall class for this code block
@@ -1526,6 +1526,7 @@ class GeSHi {
                 'visualfoxpro' => array(),
                 'whitespace' => array('ws'),
                 'xml' => array('xml', 'svg', 'xrc'),
+                'yaml' => array('yml', 'yaml'),
                 'z80' => array('z80', 'asm', 'inc')
             );
         }
