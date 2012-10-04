@@ -3869,16 +3869,12 @@ class GeSHi {
         /** NOTE: memorypeak #2 */
         $code = explode("\n", $parsed_code);
         // remove a blank first and last line
-		$repack = false;
         if ('' == trim($code[count($code) - 1])) {
             unset($code[count($code) - 1]);
-			$repack = true;
+            $code = array_values($code);
         }
-        for ($i = 0; '' == trim($code[$i]); ++$i) {
-            unset($code[$i]);
-			$repack = true;
-        }
-        if ($repack) {
+        if ('' == trim($code[0])) {
+            unset($code[0]);
             $code = array_values($code);
         }
         $parsed_code = $this->header();
